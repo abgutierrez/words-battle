@@ -1,14 +1,14 @@
+import 'package:words_generator/battle_mode/view/battle_screen_view.dart';
 import 'package:words_generator/data/drawer_items.dart';
 import 'package:words_generator/model/drawer_item.dart';
 import 'package:words_generator/navigation_drawer/cubit/iscollapsed_cubit.dart';
 import 'package:words_generator/page/deployment_page.dart';
 import 'package:words_generator/page/performance_page.dart';
 import 'package:words_generator/page/resources_page.dart';
-import 'package:words_generator/page/samples_page.dart';
 import 'package:words_generator/page/testing_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:words_generator/page/timer_page.dart';
+import 'package:words_generator/page/arcade_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -82,10 +82,11 @@ class NavigationDrawerWidget extends StatelessWidget {
     Navigator.of(context).pop();
     switch (index) {
       case 0:
-        navigateTo(TimerPage());
+        navigateTo(ArcadePage());
         break;
       case 1:
-        navigateTo(SamplesPage());
+        navigateTo(RecorderHomeView());
+        // return RecorderHomeView.route();
         break;
       case 2:
         navigateTo(TestingPage());

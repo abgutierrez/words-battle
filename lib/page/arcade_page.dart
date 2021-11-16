@@ -6,8 +6,8 @@ import 'package:words_generator/common/ticker.dart';
 import 'package:words_generator/timer/timer.dart';
 import 'package:words_generator/model/word.dart';
 
-class TimerPage extends StatelessWidget {
-  const TimerPage({Key? key}) : super(key: key);
+class ArcadePage extends StatelessWidget {
+  const ArcadePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(

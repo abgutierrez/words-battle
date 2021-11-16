@@ -80,7 +80,12 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   }
 
   void _onReset(TimerReset event, Emitter<TimerState> emit) {
-    add(const RestartRequested());
+    _tickerSubscription?.cancel();
+    emit(state.copyWith(
+      remaining: state.duration,
+      nextCompleted: false,
+      status: TimerStatus.completed,
+    ));
   }
 
   void _onRestart(RestartRequested event, Emitter<TimerState> emit) async {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 final itemsFirst = [
   DrawerItem(title: 'Arcade', icon: Icons.people),
-  DrawerItem(title: 'Samples & Tutorials', icon: Icons.phone_android),
+  DrawerItem(title: 'Battle mode', icon: Icons.phone_android),
   DrawerItem(title: 'Testing & Debugging', icon: Icons.settings_applications),
   DrawerItem(title: 'Performance & Optimization', icon: Icons.build),
 ];
